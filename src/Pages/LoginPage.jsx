@@ -7,7 +7,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="w-full h-screen flex items-start bg-[#042f1a]">
+      <div  className="w-full h-screen flex items-start bg-[#042f1a]">
         <div className=" relative w-1/2 h-full flex flex-col justify-center items-center">
           <div className="bg-white border-md text-black font-bold text-2xl">
             this is the code

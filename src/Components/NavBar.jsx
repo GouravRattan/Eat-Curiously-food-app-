@@ -41,7 +41,7 @@
 
 import React, { useState, useEffect } from "react";
 
-const NavBar = () => {
+const NavBar = ({ AboutBgColor, HomeBgColor }) => {
   const [showNavBar, setShowNavBar] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
 
@@ -65,7 +65,7 @@ const NavBar = () => {
     <nav
       className={`bg-[#042f1a] py-4 w-full fixed transition-all duration-300 ${
         showNavBar ? "top-0" : "-top-full"
-      }`}
+      }`} style={{ AboutBgColor, HomeBgColor }}
     >
       {
         <div className="px-4 w-full flex justify-around items-center">
@@ -90,7 +90,7 @@ const NavBar = () => {
           >
             RECIPES
           </a>
-          <button className="bg-black text-pink-500 font-bold px-8 py-4 rounded-full font-rammetto">
+          <button className="text-[#042f1a] bg-[#fc74b4] font-bold px-8 py-4 rounded-full font-rammetto">
             CONTACT US
           </button>
         </div>

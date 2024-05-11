@@ -11,7 +11,8 @@ export default {
         rammetto: ['Rammetto One', 'Georgia' ],
         georgia: ['Georgia'],
         roboto: ['Roboto'],
-        dela: ['DDela Gothic One']
+        dela: ['DDela Gothic One'],
+        archivo: ['Archivo']
       },
     },
   },

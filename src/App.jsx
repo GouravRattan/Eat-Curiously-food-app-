@@ -5,20 +5,22 @@ import SignUpPage from "./Pages/SignPage"
 import NavBar from './Components/NavBar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
+import AboutPage from './Pages/AboutPage';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
-      <BrowserRouter> 
+    <HomePage />
+    <AboutPage />
+      {/* <BrowserRouter> 
       <Routes>
-      <Route path='/' element={<HomePage />} />
+      <Route path='/' element={<AboutPage /> } />
         <Route path='/Login' element={<LoginPage />} />
         <Route path='/Signup' element={<SignUpPage />} />
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   )
 }
