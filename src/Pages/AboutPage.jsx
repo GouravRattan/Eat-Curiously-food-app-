@@ -6,12 +6,12 @@ const AboutPage = () => {
   return ( 
     <>
       <div className="flex bg-[#fc74b4] h-screen">
-        <NavBar AboutBgColor="#fc74b4" />
+        <NavBar  AboutBtn="text-[#042f1a] bg-[#fc74b4] font-bold px-8 py-4 rounded-full font-rammetto" />
         <div className="flex flex-col justify-center items-center w-1/2">
-          <h1 className="text-8xl font-bold font-archivo text-left mx-10 my-20">
+          <h1 className=" text-7xl font-bold font-archivo text-left mx-10 my-20">
             CURIOUS... BY NAME, BY NATURE
           </h1>
-          <p className="text-sm text-left mx-10 mb-20">
+          <p className="text-2xl text-left mx-10 my-20 pr-[400px] ">
             It’s what inspires us to whip up, throw together, tear, shake, and break the rules – on a mission to redefine food for a new generation.
           </p>
         </div>

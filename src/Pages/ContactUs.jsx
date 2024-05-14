@@ -3,9 +3,8 @@ import LoginImg from "../assets/LoginImg.png";
 import GOOGLE_ICON from "../assets/google.svg";
 import Logo from "../Components/Logo";
 import NavBar from "../Components/NavBar";
-import {Link} from "react-router-dom"
- 
-const SignUpPage = () => {
+
+const ContactUs = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -38,38 +37,34 @@ const SignUpPage = () => {
 
   return (
     <>
-      <div className="w-full h-screen flex items-start bg-[#042f1a]">
+      <div  className="relative w-full h-screen flex items-start bg-[#042f1a]">
         <NavBar />
-        <div className=" relative w-1/2 h-full flex flex-col justify-center items-center">
-          
-          <Logo />
-
-          <img
-            src={LoginImg}
-            alt="login-image"
-            className="w-[250px] absolute flex object-cover ml-40 mt-40 z-10"
-          />
-
-          <div className="absolute mix-w-[100px] top-[37%] left-[19%] flex flex-col justify-center items-center text-[100px]  space-y-24 font-rammetto">
-            <h1 className=" font-bold text-white ">MEAT FREE</h1>
-            <h1 className=" font-bold text-white pr-4 z-20">YOUR MIND</h1>
+        <div className="absolute text-white text-[80px] top-20 left-20 -space-y-9 font-bold p-20">
+          <h1>GENERAL</h1>
+          <h1>ENQIRY</h1>
+        </div>
+        <div className=" w-1/2 h-full flex flex-col justify-center items-center">
+          <div className="absolute top-[40%] space-y-16 pr-[500px] pl-40 text-white text-xl">
+            <h1 className=" ">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. animi
+              consequuntur ipsa,
+            </h1>
+            <h2 className="underline underline-offset-4">eat@curious.com</h2>
+            <div className="words space-y-8 text-xl">
+              <h2>Horton Lodge Farm</h2>
+              <h2>Brafield Road</h2>
+              <h2>Horton</h2>
+              <h2>NN7 2BA</h2>
+            </div>
           </div>
         </div>
 
         <div className="w-1/2 h-full flex flex-col p-20 justify-between items-center">
-          <h1 className="w-full text-xl max-w-[500px] mx-auto text-[#ffffff] font-semibold mr-auto">
-            curious dot
-          </h1>
-
-          <div className="w-full flex flex-col max-w-[500px] mt-10 text-white">
-            <div className="w-full flex flex-col mb-2">
-              <h3 className="text-4xl font-semibold mb-4">Sign Up</h3>
-              <p className="text-base mb-2">
-                Welcome Back! Please enter your details
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="w-full max-w-[600px] flex flex-col space-y-6">
+          <div className="w-full flex flex-col max-w-[500px] mt-32 text-white ">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full max-w-[600px] flex flex-col space-y-6"
+            >
               <input
                 type="text"
                 placeholder="FULL NAME"
@@ -80,48 +75,43 @@ const SignUpPage = () => {
 
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="EMAIL"
                 value={email}
                 onChange={handleEmailChange}
                 className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
               />
 
               <input
-                type="password"
-                placeholder="Password"
+                type="tel"
+                placeholder="CONTACT NUMBER"
                 value={password}
                 onChange={handlePasswordChange}
                 className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
               />
 
               <input
-                type="password"
-                placeholder="Confirm Password"
+                type="text"
+                placeholder="INTERESTED IN"
                 value={confirmPassword}
                 onChange={handleConfirmPasswordChange}
                 className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
               />
 
-              <Link
-              to="/login"
+              <input
+                className="w-full text-black bg-white h-40 py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder:text-slate-500"
+                type="text"
+                placeholder="MESSAGE"
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+              />
+
+              <button
                 type="submit"
-                className="w-full bg-[#fc74b4] font-bold text-white border my-2 rounded-md border-black p-4 text-center flex items-center justify-center cursor-pointer"
+                className=" w-1/3 bg-[#fc74b4] font-bold text-[#042f1a] border rounded-md border-black p-4 text-center flex items-center justify-center cursor-pointer font-rammetto"
               >
                 Sign-up
-              </Link>
+              </button>
             </form>
-
-            <div className="w-full flex items-center justify-center relative py-8">
-              <div className="w-full h-[1px] bg-white"></div>
-              <p className="text-lg absolute text-white">or</p>
-            </div>
-            
-          </div>
-
-          <div className="w-full flex items-center justify-center text-white -mt-12">
-            <p>
-              Don't have an account?{" "}
-            </p>
           </div>
         </div>
       </div>
@@ -129,4 +119,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default ContactUs;
