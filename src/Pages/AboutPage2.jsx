@@ -3,10 +3,11 @@ import aboutImage2 from '../assets/AboutImg2.png';
 import NavBar from '../Components/NavBar';
 
 const AboutPage2 = () => {
+
   return ( 
     <>
       <div className="flex bg-[#fff6f6] h-screen">
-        <NavBar about2="text-[#042f1a]" />
+        <NavBar About2="text-[#042f1a]" />
 
         <div className="relative w-1/2 flex items-center justify-center ">
           <img src={aboutImage2} alt="About" className="h-[650px] " />

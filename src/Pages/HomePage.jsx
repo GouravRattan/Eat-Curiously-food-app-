@@ -3,6 +3,8 @@ import NavBar from '../Components/NavBar';
 import LoginImg from '../assets/LoginImg.png';
 import AboutPage from './AboutPage';
 import AboutPage2 from './AboutPage2';
+import Product from '../Pages/Product'
+import PlantsPage from './PlantsPage';
 
 const HomePage = () => {
   return (
@@ -24,6 +26,8 @@ const HomePage = () => {
       </div>
       <AboutPage/>
       <AboutPage2 />
+      <Product />
+      <PlantsPage />
     </>
   );
 };

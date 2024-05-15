@@ -10,3 +10,30 @@
   .animate-floatingLogos img {
     animation: floatingLogos 2s ease-in-out infinite;
   }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .hover-animate:hover .animate-left {
+    animation: moveLeft 2s linear infinite;
+  }
+  
+  .hover-animate:hover .animate-right {
+    animation: moveRight 2s linear infinite;
+  }
+  

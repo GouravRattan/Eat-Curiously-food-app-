@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link
+import MainLogo from "../assets/transparent-logo.png"
 
 const NavBar = ({ AboutBgColor, HomeBgColor, AboutBtn, About2 }) => {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -23,12 +24,12 @@ const NavBar = ({ AboutBgColor, HomeBgColor, AboutBtn, About2 }) => {
 
   return (
     <nav 
-      className={` py-4 w-full fixed transition-all duration-300${ 
+      className={` z-40 py-4 w-full fixed transition-all duration-300 ${ 
         showNavBar ? "top-0" : "-top-full"
       } `} style={{ HomeBgColor, AboutBtn, About2}}
     >
       {
-        <div className={`${About2} px-4 w-full flex justify-around items-center`}>
+        <div className={`px-4 w-full flex justify-around items-center ${About2}`}>
           {/* Use Link component for the "About" link */}
           <Link
             to="/about"
@@ -36,15 +37,13 @@ const NavBar = ({ AboutBgColor, HomeBgColor, AboutBtn, About2 }) => {
           >
             ABOUT
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/product"
             className="text-white font-semibold font-georgia text-lg mr-8"
           >
             PRODUCT
-          </a>
-          <a href="#" className="text-white font-semibold  text-lg mr-8">
-            LOGO
-          </a>
+          </Link>
+          <img src={MainLogo} className="text-white font-semibold text-lg mr-8 w-[100px]" />
           <a
             href="#"
             className="text-white font-semibold font-georgia text-lg mr-8"
