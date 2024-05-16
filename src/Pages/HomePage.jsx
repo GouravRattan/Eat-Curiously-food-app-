@@ -5,6 +5,7 @@ import AboutPage from './AboutPage';
 import AboutPage2 from './AboutPage2';
 import Product from '../Pages/Product'
 import PlantsPage from './PlantsPage';
+import Recipes from './Recipes'
 
 const HomePage = () => {
   return (
@@ -28,6 +29,7 @@ const HomePage = () => {
       <AboutPage2 />
       <Product />
       <PlantsPage />
+      <Recipes />
     </>
   );
 };

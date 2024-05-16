@@ -10,6 +10,10 @@ import ContactUs from './Pages/ContactUs';
 import Product from './Pages/Product'; 
 import PlantsPage from './Pages/PlantsPage';
 import Recipes from './Pages/Recipes';
+import P1 from './Pages/Products/P1';
+import P2 from './Pages/Products/P2';
+import P3 from './Pages/Products/P3';
+import P4 from './Pages/Products/P4';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +31,10 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/plant" element={<PlantsPage />} />
           <Route path="/recipes" element={<Recipes />} />
+          <Route path="/p1" element={<P1 />} />
+          <Route path="/p2" element={<P2 />} />
+          <Route path="/p3" element={<P3 />} />
+          <Route path="/p4" element={<P4 />} />
         </Routes>
       </div>
     </BrowserRouter>
