@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import LoginImg from "../assets/LoginImg.png";
 import GOOGLE_ICON from "../assets/google.svg";
 import Logo from "../Components/Logo";
-import NavBar from "../Components/NavBar";
 import {Link} from "react-router-dom"
  
 const SignUpPage = () => {
@@ -39,7 +38,6 @@ const SignUpPage = () => {
   return (
     <>
       <div className="w-full h-screen flex items-start bg-[#042f1a]">
-        <NavBar />
         <div className=" relative w-1/2 h-full flex flex-col justify-center items-center">
           
           <Logo />
@@ -103,7 +101,7 @@ const SignUpPage = () => {
               />
 
               <Link
-              to="/login"
+              to="/"
                 type="submit"
                 className="w-full bg-[#fc74b4] font-bold text-white border my-2 rounded-md border-black p-4 text-center flex items-center justify-center cursor-pointer"
               >

@@ -14,7 +14,6 @@ const Recipes = () => {
         <div className="grid grid-cols-4 grid-rows-1 w-full h-screen bg-[#042f1a] p-32 gap-4 items-center">
         
         <Link to='/p1' className="relative w-full h-full bg-[#1abe71] z-10 overflow-hidden rounded-2xl flex items-center hover:scale-105 ease-in-out duration-300">
-            <span className='absolute z-20 bg-black text-white left-80 top-10 '>spin</span>
             <img src={R1} alt="" className="h-full w-full object-cover" />
           </Link>
 

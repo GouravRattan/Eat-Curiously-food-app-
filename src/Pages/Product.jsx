@@ -9,7 +9,6 @@ import P5 from '../assets/Product-imgs/image (5).png'
 import P6 from '../assets/Product-imgs/image (6).png'
 
 const Product = () => {
-
   return ( 
     <>   
     <div className="grid grid-cols-3 grid-rows-2 w-full h-screen bg-[#042f1a] p-10 gap-4">

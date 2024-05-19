@@ -37,3 +37,43 @@
     animation: moveRight 2s linear infinite;
   }
   
+
+   /* AboutPage3.css */
+
+/* Define the first animation for inward movement */
+
+
+/* @keyframes zoomIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0; 
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+} */
+
+/* Define the second animation for outward movement */
+@keyframes zoomOut {
+  from {
+    transform: translateY(0); /* Start with content in its original position */
+    opacity: 1; /* Start with opacity 1 */
+  }
+  to {
+    transform: translateY(-10px); /* Move content up slightly */
+    opacity: 0; /* Fade out */
+  }
+}
+
+/* Apply the animation to the container */
+.zoom-in {
+  animation: zoomIn 0.5s ease-out; /* Animation for inward movement */
+}
+
+.zoom-out {
+  animation: zoomOut 0.5s ease-out; /* Animation for outward movement */
+}
+
+
+  
