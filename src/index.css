@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+}
+
 @keyframes floatingLogos {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -74,6 +80,46 @@
 .zoom-out {
   animation: zoomOut 0.5s ease-out; /* Animation for outward movement */
 }
+
+
+@keyframes marquee {
+  from { transform: translateX(calc(0 + var(--gap))); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
+
+.marquee-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10; /* Adjust z-index as needed */
+}
+
+/* Global CSS to apply spinnerGrow animation to all elements */
+
+@keyframes spinnerGrow {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 3;
+  }
+  
+}
+
+/* Apply spinnerGrow animation to all elements */
+.meat, .free, img {
+  animation: spinnerGrow 3s ease-in-out ;
+}
+
+
+
+
 
 
   

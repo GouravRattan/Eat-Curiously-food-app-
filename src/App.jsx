@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import LoginPage from "./Pages/LoginPage";
-import SignUpPage from "./Pages/SignPage"; // Assuming the correct filename is SignUpPage
-import NavBar from './Components/NavBar';
+import SignUpPage from "./Pages/SignPage";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
@@ -17,12 +16,15 @@ import P1 from './Pages/Products/P1';
 import P2 from './Pages/Products/P2';
 import P3 from './Pages/Products/P3';
 import P4 from './Pages/Products/P4';
-import Cart from './Pages/Cart';
+import Cart from './Pages/cart/Cart';
+import Shop from './Pages/shop/shop';
+import {ShopContextProvider} from './Context/shopContext';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <ShopContextProvider>
     <BrowserRouter>
       <div>
         <Routes>
@@ -43,9 +45,11 @@ function App() {
           <Route path="/p3" element={<P3 />} />
           <Route path="/p4" element={<P4 />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Shop" element={<Shop />} />
         </Routes>
       </div>
     </BrowserRouter>
+    </ShopContextProvider>
   );
 }
 

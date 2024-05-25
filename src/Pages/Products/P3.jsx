@@ -26,7 +26,7 @@ const P3 = () => {
                             type="submit"
                             className=" bg-white text-[#042f1a] text-2xl font-bold font-rammetto rounded-md p-3 cursor-pointer"
                         >
-                            ADD TO CART
+                            GO TO CART
                         </button>
                     </div>
                 </div>

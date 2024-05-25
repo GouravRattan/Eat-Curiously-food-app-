@@ -70,10 +70,10 @@ const SignUpPage = () => {
             <form onSubmit={handleSubmit} className="w-full max-w-[600px] flex flex-col space-y-6">
               <input
                 type="text"
-                placeholder="FULL NAME"
+                placeholder="Full Name"
                 value={fullName}
                 onChange={handleFullNameChange}
-                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
+                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <input
@@ -81,7 +81,7 @@ const SignUpPage = () => {
                 placeholder="Email"
                 value={email}
                 onChange={handleEmailChange}
-                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
+                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <input
@@ -89,7 +89,7 @@ const SignUpPage = () => {
                 placeholder="Password"
                 value={password}
                 onChange={handlePasswordChange}
-                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
+                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <input
@@ -97,28 +97,31 @@ const SignUpPage = () => {
                 placeholder="Confirm Password"
                 value={confirmPassword}
                 onChange={handleConfirmPasswordChange}
-                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
+                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
-              <Link
-              to="/"
+              <button
                 type="submit"
                 className="w-full bg-[#fc74b4] font-bold text-white border my-2 rounded-md border-black p-4 text-center flex items-center justify-center cursor-pointer"
               >
                 Sign-up
-              </Link>
+              </button>
             </form>
 
             <div className="w-full flex items-center justify-center relative py-8">
               <div className="w-full h-[1px] bg-white"></div>
-              <p className="text-lg absolute text-white">or</p>
             </div>
             
           </div>
-
-          <div className="w-full flex items-center justify-center text-white -mt-12">
+          <div className="w-full flex items-center justify-center text-white">
             <p>
-              Don't have an account?{" "}
+            have an account?{" "}
+
+            <Link to="/signup"
+               className="font-semibold underline underline-offset-2 cursor-pointer">
+                {" "}
+                LOGIN{" "}
+              </Link>
             </p>
           </div>
         </div>

@@ -58,13 +58,13 @@ const LoginPage = () => {
               </p>
             </div>
 
-            <form onSubmit={handleLogin} className="w-full max-w-[600px] flex flex-col space-y-6">
+            <form onSubmit={handleLogin} className="w-full max-w-[600px] flex flex-col space-y-6 ">
               <input
                 type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
+                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <input
@@ -72,7 +72,7 @@ const LoginPage = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none"
+                className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <div className="w-full flex items-center justify-center mt-4">

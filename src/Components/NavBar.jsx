@@ -17,7 +17,7 @@ const NavBar = ({ AboutBgColor, HomeBgColor, AboutBtn }) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -63,3 +63,4 @@ const NavBar = ({ AboutBgColor, HomeBgColor, AboutBtn }) => {
 };
 
 export default NavBar;
+
