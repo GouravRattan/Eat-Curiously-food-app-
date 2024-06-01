@@ -10,7 +10,8 @@ import AboutPage4 from "./AboutPage4";
 import Product from "../Pages/Product";
 import PlantsPage from "./PlantsPage";
 import Recipes from "./Recipes";
-import Marquee from "../Components/Marquee"; // Import the Marquee component
+import Marquee from "../Components/Marquee";
+import Footer from "../Components/Footer";
 
 const HomePage = () => {
   return (
@@ -41,6 +42,7 @@ const HomePage = () => {
       <PlantsPage />
       <Recipes />
       <Marquee />
+      <Footer />
     </>
   );
 };

@@ -39,7 +39,7 @@ const NavBar = ({ AboutBgColor, HomeBgColor, AboutBtn }) => {
           ABOUT
         </Link>
         <Link
-          to="/product"
+          to="/DisPro"
           className="text-2xl font-semibold mr-8 text-white"
         >
           PRODUCT

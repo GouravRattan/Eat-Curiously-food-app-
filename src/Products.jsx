@@ -28,4 +28,25 @@ export const PRODUCTS = [
         price: 699.0,
         productImage: rec4,
       },
+      {
+        id: 5,
+        productName: "CURIOUS",
+        price: 699.0,
+        productImage: rec1,
+      }, {
+        id: 6,
+        productName: "CURIOUS",
+        price: 699.0,
+        productImage: rec3,
+      }, {
+        id: 7,
+        productName: "CURIOUS",
+        price: 699.0,
+        productImage: rec1,
+      }, {
+        id: 8,
+        productName: "CURIOUS",
+        price: 699.0,
+        productImage: rec2,
+      },
 ]

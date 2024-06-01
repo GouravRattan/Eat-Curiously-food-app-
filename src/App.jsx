@@ -18,7 +18,9 @@ import P3 from './Pages/Products/P3';
 import P4 from './Pages/Products/P4';
 import Cart from './Pages/cart/Cart';
 import Shop from './Pages/shop/shop';
+import ApiCall from './Pages/ApiCall';
 import {ShopContextProvider} from './Context/shopContext';
+import DisPro from './Pages/Dishes_Data/DisPro';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,6 +48,8 @@ function App() {
           <Route path="/p4" element={<P4 />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route path='/Api' element={<ApiCall />} />
+          <Route path='/DisPro' element={<DisPro />} />
         </Routes>
       </div>
     </BrowserRouter>

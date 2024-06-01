@@ -1,6 +1,9 @@
 import React from 'react';
 import aboutImage from '../assets/about-img.svg';
 import NavBar from '../Components/NavBar';
+import Footer from '../Components/Footer';
+import Marquee from '../Components/Marquee';
+import PlantsPage from './PlantsPage';
 
 const AboutPage = () => {
   return ( 
@@ -19,6 +22,9 @@ const AboutPage = () => {
           <img src={aboutImage} alt="About" className="h-80 mr-10" />
         </div>
       </div>
+      <PlantsPage />
+        <Footer />
+        <Marquee />
     </>
   );
 };
