@@ -10,7 +10,9 @@ const DisPro = () => {
     <>
     <Link to='/cart' className="absolute w-10 right-10 top-8 z-50">
         <img src={CartIcon} alt="" />
-      </Link>
+      </Link>'
+
+
     <div>
       {PRODUCTS.map((product) => (
         <Dishes key={product.id} data={product} />

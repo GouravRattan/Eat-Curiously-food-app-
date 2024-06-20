@@ -21,6 +21,9 @@ import Shop from './Pages/shop/shop';
 import ApiCall from './Pages/ApiCall';
 import {ShopContextProvider} from './Context/shopContext';
 import DisPro from './Pages/Dishes_Data/DisPro';
+import ForgotPassword from './Pages/ForgotPassword';
+import OTPpage from './Pages/OTPpage';
+import UserProfile from './Pages/User/UserProfile';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,6 +34,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
           {/* Define other routes here */}
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/home" element={<HomePage />} />
@@ -50,6 +54,9 @@ function App() {
           <Route path="/Shop" element={<Shop />} />
           <Route path='/Api' element={<ApiCall />} />
           <Route path='/DisPro' element={<DisPro />} />
+          <Route path='/otp' element={<OTPpage />} />
+          <Route path='/User/:activepage' element={<UserProfile />} />
+        
         </Routes>
       </div>
     </BrowserRouter>

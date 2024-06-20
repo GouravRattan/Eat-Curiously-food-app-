@@ -2,13 +2,59 @@ import React, { useState } from "react";
 import LoginImg from "../assets/LoginImg.png";
 import GOOGLE_ICON from "../assets/google.svg";
 import Logo from "../Components/Logo";
-import {Link} from "react-router-dom"
+import {Navigate, Link} from "react-router-dom"
  
 const SignUpPage = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSignUp, setIsSignUp] = useState(false);
+
+
+    const handleSingUp = async (e) =>{
+      e.preventDefault();
+
+      const requestData = {
+        eventID: "1006",
+        addInfo: {
+          name: fullName,
+          email: email,
+          password: password,
+          phone: phone
+        }
+      };
+
+      try {
+        const response = await fetch("http://localhost:2003/registration", { 
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestData),
+        });
+
+        const data = await response.json();
+      console.log(data , 'api data')
+
+      if (response.ok && data.rData.rCode === 0) {
+        // If authentication succeeds, set isSignUp to true
+        setIsSignUp(true);
+      } else {
+        // If authentication fails, display an error message
+        alert(data.rData.rMessage || "Invalid email or password");
+      }
+      }
+
+      catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred while trying to log in.");
+      }
+    };
+
+    if (isSignUp) {
+      return <Navigate to="/" />;
+    }  
 
   const handleFullNameChange = (e) => {
     setFullName(e.target.value);
@@ -22,8 +68,8 @@ const SignUpPage = () => {
     setPassword(e.target.value);
   };
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
+  const handlePhone = (e) => {
+    setPhone(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -32,7 +78,7 @@ const SignUpPage = () => {
     console.log("Full Name:", fullName);
     console.log("Email:", email);
     console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
+    console.log("Phone:", phone);
   };
 
   return (
@@ -67,7 +113,7 @@ const SignUpPage = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="w-full max-w-[600px] flex flex-col space-y-6">
+            <form onSubmit={handleSingUp} className="w-full max-w-[600px] flex flex-col space-y-6">
               <input
                 type="text"
                 placeholder="Full Name"
@@ -93,10 +139,10 @@ const SignUpPage = () => {
               />
 
               <input
-                type="password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
+                type="phone"
+                placeholder="phone"
+                value={phone}
+                onChange={handlePhone}
                 className="w-full text-black bg-white py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
@@ -117,7 +163,7 @@ const SignUpPage = () => {
             <p>
             have an account?{" "}
 
-            <Link to="/signup"
+            <Link to="/"
                className="font-semibold underline underline-offset-2 cursor-pointer">
                 {" "}
                 LOGIN{" "}

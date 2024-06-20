@@ -8,7 +8,7 @@ const Dishes = (props) => {
 
   return (
     <>
-    <div className="bg-[#fc74b4]">
+    <div className="bg-[#fc74b4] h-full">
       <NavBar DisNav="text-green-700" />
       <br />
   <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -46,7 +46,6 @@ const Dishes = (props) => {
         </div>
 
         <button className='absolute top-0 right-0 bg-white font-rammetto rounded-md p-1'>Add to Cart </button>
-        <button className=' bg-white  font-rammetto rounded-md p-1'>REMOVE FROM CART</button>
         </div>
       </a>
 
@@ -84,7 +83,6 @@ const Dishes = (props) => {
         </div>
 
         <button className='absolute top-0 right-0 bg-white font-rammetto rounded-md p-1'>Add to Cart </button>
-        <button className=' bg-white  font-rammetto rounded-md p-1'>REMOVE FROM CART</button>
         </div>
       </a>
 
@@ -122,7 +120,6 @@ const Dishes = (props) => {
         </div>
 
         <button className='absolute top-0 right-0 bg-white font-rammetto rounded-md p-1'>Add to Cart </button>
-        <button className=' bg-white  font-rammetto rounded-md p-1'>REMOVE FROM CART</button>
         </div>
       </a>
 
@@ -157,7 +154,6 @@ const Dishes = (props) => {
         </div>
 
         <button className='absolute top-0 right-0 bg-white font-rammetto rounded-md p-1'>Add to Cart </button>
-        <button className=' bg-white  font-rammetto rounded-md p-1'>REMOVE FROM CART</button>
         </div>
       </a>
     </div>

@@ -1,20 +1,16 @@
-import React from 'react'
+import React from 'react';
 
- const Logo = ({}) => {
+const Logo = () => {
   return (
-    <div>
-          
-          <div className=" logo absolute flex flex-col text-[65px] top-20 right-[13rem] -space-y-9 justify-center items-center font-gravitas">
-            <h1 className=" font-bold text-white  ">
-              EAT
-            </h1>
-            <h1 className=" font-bold text-white">
-              CURIOUS
-            </h1>
-          </div>
-
+    <div className="logo absolute flex flex-col top-10 right-[13rem] md:right-[20rem] lg:right-[25rem] xl:right-[22rem] text-[10px] justify-center items-center font-gravitas">
+      <h1 className="text-[40px] sm:text-[50px] md:text-[65px] lg:text-[80px] xl:text-[40px] font-bold text-white">
+        EAT
+      </h1>
+      <h1 className="text-[40px] sm:text-[50px] md:text-[65px] lg:text-[80px] xl:text-[40px] font-bold text-white">
+        CURIOUS
+      </h1>
     </div>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;
