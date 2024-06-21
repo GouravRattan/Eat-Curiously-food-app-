@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from '../assets/AboutImg2.png'; // Replace with your image path
+import backgroundImage from '../assets/LoginImg.png'; // Replace with your image path
 
 const Banner = ({HeroText}) => {
   return (
@@ -11,7 +11,7 @@ const Banner = ({HeroText}) => {
           height: 400,
           aspectRatio: '16/9', // Adjust this ratio to match your image's aspect ratio
           maxWidth: '1900px', // Adjust max width as per your design
-          margin: '100px auto', // Center horizontally
+          margin: 'auto', // Center horizontally
         }}
       >
         <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
