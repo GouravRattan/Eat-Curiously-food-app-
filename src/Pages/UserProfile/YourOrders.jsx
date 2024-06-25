@@ -1,4 +1,5 @@
 import React from "react";
+import StatusDot from "../../Components/StatusDot";
 
 const YourOrders = () => {
   const data = [
@@ -11,7 +12,7 @@ const YourOrders = () => {
     {
       id: 112345,
       date: "12/12/2021",
-      status: "Delivered",
+      status: "On the way",
       total: 1000,
     },
     {
@@ -23,7 +24,7 @@ const YourOrders = () => {
     {
       id: 112345,
       date: "12/12/2021",
-      status: "Delivered",
+      status: "Cnacelled",
       total: 1000,
     },
     {
@@ -35,7 +36,7 @@ const YourOrders = () => {
     {
       id: 112345,
       date: "12/12/2021",
-      status: "Delivered",
+      status: "On the way",
       total: 1000,
     },
     // You can add more orders here
@@ -61,7 +62,24 @@ const YourOrders = () => {
             <tr key={index} className="hover:bg-gray-100">
               <td className="border-b border-gray-300 p-2">{order.id}</td>
               <td className="border-b border-gray-300 p-2">{order.date}</td>
-              <td className="border-b border-gray-300 p-2">{order.status}</td>
+              <td className="border-b border-gray-300 p-2">
+                {" "}
+                <p>
+                  {" "}
+                  
+                  {order.status == "Delivered" && (
+                    <span className="greendot"> <StatusDot color="green" /> </span>
+                  )}
+                  {/* <StatusDot color="yellow" /> */}
+                  {order.status == "On the way" && (
+                    <span className="yellowdot"> <StatusDot color="orange" /> </span>
+                  )}{" "}
+                  {order.status == "Cnacelled" && (
+                    <span className="reddot"> <StatusDot color="red" /> </span>
+                  )}{" "}
+                  {order.status}{" "}
+                </p>{" "}
+              </td>
               <td className="border-b border-gray-300 p-2">${order.total}</td>
               <td className="border-b border-gray-300 p-2">
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-200">

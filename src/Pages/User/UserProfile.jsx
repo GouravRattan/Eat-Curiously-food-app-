@@ -1,4 +1,4 @@
-import React, { act } from 'react';
+// import React, { act } from 'react';
 import NavBar from '../../Components/NavBar';
 import Footer from '../../Components/Footer';
 import Marquee from '../../Components/Marquee';
@@ -7,6 +7,7 @@ import UserSidebar from '../UserProfile/UserSidebar';
 import ChangePassword from '../UserProfile/ChangePassword';
 import AccountSettings from '../UserProfile/AccountSettings';
 import YourOrders from '../UserProfile/YourOrders';
+import Address from '../UserProfile/Address';
 
 import { useParams } from 'react-router-dom';
 
@@ -30,6 +31,7 @@ const UserProfile = () => {
          {activepage === "accountsettings" && <AccountSettings /> }
          {activepage === "changepassword" && <ChangePassword /> }
          {activepage === "yourorders" && <YourOrders /> }
+         {activepage === "address" && <Address /> }
         </div>
 
       </div>
