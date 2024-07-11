@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MainLogo from "../assets/transparent-logo.png";
+import LogoComponent from "./MainLogo";
 
 const NavBar = ({ HomeBgColor, textColor = "text-white", fontClass = "font-roboto", AboutBtn }) => {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -41,13 +42,15 @@ const NavBar = ({ HomeBgColor, textColor = "text-white", fontClass = "font-robot
         >
           PRODUCT
         </Link>
-        <img src={MainLogo} className="text-2xl font-semibold mr-8 w-[120px]" />
-        <a
-          href="#"
+        {/* <img src={MainLogo} className="text-2xl font-semibold mr-8 w-[120px]" /> */}
+        <LogoComponent logo={MainLogo} altText="Main Logo" className="text-2xl font-semibold mr-8 w-[120px]" />
+
+        <Link to="/recipes"
           className={`text-2xl font-semibold mr-8 ${textColor}`}
         >
           RECIPES
-        </a>
+        </Link>
+
         <Link 
           to="/contact"
           className={`font-bold px-8 py-4 rounded-full font-rammetto ${AboutBtn}`}

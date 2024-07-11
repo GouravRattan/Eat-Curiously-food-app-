@@ -14,7 +14,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     const requestData = {
-      eventID: "1002", // Event ID for login as per your backend code
+      eventID: "1001", // Event ID for login as per your backend code
       addInfo: {
         UserId: email,
         Password: password,
@@ -22,7 +22,7 @@ const LoginPage = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:2003/login", {
+      const response = await fetch("http://localhost:2005/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const LoginPage = () => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full text-black bg-white py-3 md:py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder:px-4"
+                className="w-full text-black bg-white py-3 md:py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <input
@@ -96,7 +96,7 @@ const LoginPage = () => {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full text-black bg-white py-3 md:py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder:px-4"
+                className="w-full text-black bg-white py-3 md:py-4 border-b rounded-md border-black outline-none focus:outline-none placeholder: px-4"
               />
 
               <div className="w-full flex items-center justify-center mt-4">

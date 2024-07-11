@@ -8,6 +8,8 @@ import ChangePassword from '../UserProfile/ChangePassword';
 import AccountSettings from '../UserProfile/AccountSettings';
 import YourOrders from '../UserProfile/YourOrders';
 import Address from '../UserProfile/Address';
+import MainLogo2 from "../../assets/Untitled design (1).png"
+import LogoComponent from '../../Components/MainLogo';
 
 import { useParams } from 'react-router-dom';
 
@@ -17,9 +19,12 @@ const UserProfile = () => {
 
   return (
     <>
-    <div className="userprofile">
+    <div className="userprofile bg-slate-100">
+      <LogoComponent  />
       <NavBar textColor="black" AboutBtn="bg-blue-500 text-white" />
+      <div className=' mt-28'>
       <Banner HeroText="My Profile" />
+        </div>
 
       <div className="userprofilein flex gap-20 m-20">
 

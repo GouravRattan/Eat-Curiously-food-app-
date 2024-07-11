@@ -41,7 +41,7 @@ const HomePage = () => {
             <AboutPage4 />
             <Product />
             <PlantsPage />
-            <Recipes />
+            {/* <Recipes /> */}
             <Marquee />
             <Footer />
         </>

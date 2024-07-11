@@ -24,14 +24,15 @@ import DisPro from './Pages/Dishes_Data/DisPro';
 import ForgotPassword from './Pages/ForgotPassword';
 import OTPpage from './Pages/OTPpage';
 import UserProfile from './Pages/User/UserProfile';
+import DiaplayRecipe from './Pages/RecipesData/DiaplayRecipe';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <div>
     <ShopContextProvider>
     <BrowserRouter>
-      <div>
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
@@ -56,11 +57,11 @@ function App() {
           <Route path='/DisPro' element={<DisPro />} />
           <Route path='/otp' element={<OTPpage />} />
           <Route path='/User/:activepage' element={<UserProfile />} />
-        
+          <Route path='/DiaplayRecipe' element={<DiaplayRecipe />} />
         </Routes>
-      </div>
     </BrowserRouter>
     </ShopContextProvider>
+      </div>
   );
 }
 

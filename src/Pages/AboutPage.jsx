@@ -23,7 +23,6 @@ const AboutPage = () => {
         </div>
       </div>
       <PlantsPage />
-        <Footer />
         <Marquee />
     </>
   );

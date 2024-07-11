@@ -16,7 +16,7 @@ const SignUpPage = () => {
       e.preventDefault();
 
       const requestData = {
-        eventID: "1006",
+        eventID: "1002",
         addInfo: {
           name: fullName,
           email: email,
@@ -26,7 +26,7 @@ const SignUpPage = () => {
       };
 
       try {
-        const response = await fetch("http://localhost:2003/registration", { 
+        const response = await fetch("http://localhost:2005/registration", { 
           method: "POST",
           headers: {
             "Content-Type": "application/json",
